@@ -1,12 +1,53 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Front
 
-Currently, two official plugins are available:
+Este es el proyecto frontend para la solución de gestión de pagos, utilizando React y Vite. El frontend interactúa con el backend desplegado en Azure para registrar y consultar pagos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologías Utilizadas
 
-## Expanding the ESLint configuration
+- **React**
+- **Vite**
+- **Axios**
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+2. **Instalar dependencias**:
+
+   Una vez dentro del proyecto, instala las dependencias necesarias con el siguiente comando:
+     ```
+     npm install
+     ```
+
+
+3. **Ejecutar el Proyecto**:
+
+   Inicia el servidor:
+     ```
+     npm run dev
+     ```
+
+   Esto iniciará la aplicación en `http://localhost:5173`.
+
+4. **Acceder a la Aplicación**:
+
+   Abrir el navegador y acceder a la siguiente URL:
+
+   ```
+   http://localhost:5173
+   ```
+
+## Dependencias Instaladas
+
+- **React**: Para la construcción de la interfaz de usuario.
+- **Vite**: Para la construcción rápida del proyecto.
+- **Axios**: Para las solicitudes HTTP.
+- **React Router**: Para el manejo de rutas,
+- **CSS/SCSS**: Para la estilización de los componentes.
+
+## Métodos de la API
+
+- **POST** `/api/v1/pagos/{totalUsuario}`: Crear un pago.
+- **GET** `/api/v1/pagos/{idUser}`: Obtener los pagos realizados por un usuario.
+- **PUT** `/api/v1/pagos/{idPago}/producto`: Añadir un producto a un pago.
+- **PUT** `/api/v1/pagos/{idPago}/total`: Validar el total dado por el usuario.
+
+
